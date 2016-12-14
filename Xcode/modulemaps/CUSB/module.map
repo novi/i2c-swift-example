@@ -1,0 +1,5 @@
+module CUSB [system] {
+header "/usr/local/include/usb.h"
+export *
+}
+
