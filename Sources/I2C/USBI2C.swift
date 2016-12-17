@@ -108,8 +108,8 @@ public final class I2CTinyUSB {
         }
         self.usb = handler
         
-        let funcVal = String(format: "%lx", try getFunc())
-        try print("func=\(funcVal), status=\(getStatus())")
+        //let funcVal = String(format: "%lx", try getFunc())
+        //try print("func=\(funcVal), status=\(getStatus())")
         
         try usbSet(cmd: CMD_SET_DELAY, value: 10)
     }

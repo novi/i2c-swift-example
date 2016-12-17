@@ -16,9 +16,14 @@ final class USBI2CTests: XCTestCase {
             
             print("sending... to", addrStr)
             
-            if try device.write(toAddress: addr, data: [], readBytes: 0) == [] {
-                print("device found at", addrStr)
+            do {
+                if try device.write(toAddress: addr, data: [], readBytes: 0) == [] {
+                    print("device found at", addrStr)
+                }
+            } catch I2CTinyUSB.USBDeviceError.USBI2CNoAckError {
+                // no device found
             }
+            
             addr += 1
         }
         

@@ -24,9 +24,14 @@ try zt8.resume()
 
 var i = 0
 while true {
+    
+    // as integer
     try zt8.setString("\(i)")
     
-    usleep(500_1000)
+    // as hex
+    //try zt8.setString(String(format: "%x", i))
+    
+    usleep(100 * 1000)
     
     i += 1
 }

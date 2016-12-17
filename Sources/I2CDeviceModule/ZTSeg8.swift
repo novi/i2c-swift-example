@@ -114,14 +114,14 @@ public extension ZT8SegDevice {
         
         var buffer: [UInt8] = [0,0,0,0]
         let chars = Array(string.characters)
-        var index = buffer.count - 1
+        var index = 0
         for c in chars[0..<min(4, chars.count)].reversed() {
             var intVal = Int(String(c), radix: 16) ?? 0
             if intVal > 0xf {
                 intVal = 0
             }
             buffer[index] = segmentTable[intVal]
-            index -= 1
+            index += 1
         }
         
         try setData(buffer)
