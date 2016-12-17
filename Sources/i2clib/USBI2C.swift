@@ -60,12 +60,15 @@ fileprivate func findDevice(vendor: UInt16, product: UInt16) -> UnsafeMutablePoi
     return nil
 }
 
-public final class I2CTinyUSB: I2CDevice {
+public final class I2CTinyUSB {
     
     public enum USBDeviceError: Error {
         case USBDeviceOpenError
         case USBControlMessageSendError
-        case i2cTinyUSBNotFound
+        case I2CTinyUSBNotFound
+        case USBI2CWriteError
+        case USBI2CReadError
+        case USBI2CNoAckError
     }
     
     private static var usbInitialized: Bool = false
@@ -90,13 +93,15 @@ public final class I2CTinyUSB: I2CDevice {
     fileprivate let CMD_I2C_BEGIN = 1 as Int32 // flag to I2C_IO
     fileprivate let CMD_I2C_END = 2 as Int32 // flag to I2C_IO
 
+    fileprivate let TimeoutControl = 1000 as Int32
+    fileprivate let TimeoutI2CBus = 1000 as Int32
     
     fileprivate let usb: OpaquePointer
     public init() throws {
         type(of: self).usbInit()
         
         guard let dev = findDevice(vendor: type(of: self).VendorID, product: type(of: self).ProductID) else {
-            throw USBDeviceError.i2cTinyUSBNotFound
+            throw USBDeviceError.I2CTinyUSBNotFound
         }
         guard let handler = usb_open(dev) else {
             throw USBDeviceError.USBDeviceOpenError
@@ -118,14 +123,14 @@ public final class I2CTinyUSB: I2CDevice {
 fileprivate extension I2CTinyUSB {
     
     func usbRead(cmd: Int32, outBuffer: UnsafeMutablePointer<Int8>, length: UInt32) throws {
-        let bytesRead = usb_control_msg(usb, USB_CTRL_IN, cmd, 0, 0, outBuffer, Int32(length), 1000)
+        let bytesRead = usb_control_msg(usb, USB_CTRL_IN, cmd, 0, 0, outBuffer, Int32(length), TimeoutControl)
         if bytesRead < 0 {
             throw USBDeviceError.USBControlMessageSendError
         }
     }
     
     func usbSet(cmd: Int32, value: Int32) throws {
-        let nBytes = usb_control_msg(usb, USB_TYPE_VENDOR, cmd, value, 0, nil, 0, 1000)
+        let nBytes = usb_control_msg(usb, USB_TYPE_VENDOR, cmd, value, 0, nil, 0, TimeoutControl)
         if nBytes < 0 {
             throw USBDeviceError.USBControlMessageSendError
         }
@@ -161,16 +166,8 @@ fileprivate extension I2CTinyUSB {
 
 extension I2CTinyUSB {
     
-    public func write(_ buf: [UInt8], readBytes: UInt8) throws -> [UInt8] {
-        fatalError()
-    }
-    
-    public func write(_ buf: [UInt8]) throws {
-        
-    }
-    
     internal func sendAck(addr: UInt8) throws -> Bool {
-        let nBytes = usb_control_msg(usb, USB_CTRL_IN, CMD_I2C_IO + CMD_I2C_BEGIN + CMD_I2C_END, 0, Int32(addr), nil, 0, 1000)
+        let nBytes = usb_control_msg(usb, USB_CTRL_IN, CMD_I2C_IO + CMD_I2C_BEGIN + CMD_I2C_END, 0, Int32(addr), nil, 0, TimeoutControl)
         if nBytes < 0 {
             throw USBDeviceError.USBControlMessageSendError
         }
@@ -179,4 +176,45 @@ extension I2CTinyUSB {
         }
         return false
     }
+}
+
+extension I2CTinyUSB: I2CDevice {
+    
+    public func write(toAddress: UInt8, data: [UInt8]) throws {
+        try write(toAddress: toAddress, data: data, writeOnly: true)
+    }
+    
+    private func write(toAddress: UInt8, data: [UInt8], writeOnly: Bool) throws {
+        var buffer = unsafeBitCast(data, to: [Int8].self)
+        // start control flow, (end control flow if no reading)
+        let nBytes = usb_control_msg(usb, USB_CTRL_OUT, CMD_I2C_IO + CMD_I2C_BEGIN + (writeOnly ? 0 : CMD_I2C_END), 0, Int32(toAddress), &buffer, Int32(data.count), TimeoutControl)
+        if nBytes < 0 {
+            throw USBDeviceError.USBI2CWriteError
+        }
+        if writeOnly {
+            // check ACK
+            if try getStatus() != .addressACK {
+                throw USBDeviceError.USBI2CNoAckError
+            }
+        }
+    }
+    
+    public func write(toAddress: UInt8, data: [UInt8], readBytes: UInt32) throws -> [UInt8] {
+        
+        // start control flow and write bytes
+        try write(toAddress: toAddress, data: data, writeOnly: false)
+        
+        var readBuffer = [Int8](repeating: 0, count: Int(readBytes))
+        let writeLength = data.count
+        // read data and end control flow
+        let nBytes = usb_control_msg(usb, USB_CTRL_IN, CMD_I2C_IO + (writeLength > 0 ? 0 : CMD_I2C_BEGIN) + CMD_I2C_END, 0, Int32(toAddress), &readBuffer, Int32(readBytes), TimeoutI2CBus)
+        if nBytes < 0 {
+            throw USBDeviceError.USBI2CReadError
+        }
+        if try getStatus() != .addressACK {
+            throw USBDeviceError.USBI2CNoAckError
+        }
+        return unsafeBitCast(readBuffer, to: [UInt8].self)
+    }
+    
 }

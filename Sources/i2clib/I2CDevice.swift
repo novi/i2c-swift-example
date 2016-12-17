@@ -9,8 +9,8 @@
 import Foundation
 
 public protocol I2CDevice {
-    func write(_ buf: [UInt8]) throws
-    func write(_ buf: [UInt8], readBytes: UInt8) throws -> [UInt8]
+    func write(toAddress: UInt8, data: [UInt8]) throws
+    func write(toAddress: UInt8, data: [UInt8], readBytes: UInt32) throws -> [UInt8]
 }
 
 public final class NativeI2CDevice: I2CDevice {
@@ -19,11 +19,10 @@ public final class NativeI2CDevice: I2CDevice {
         
     }
     
-    public func write(_ buf: [UInt8]) throws {
+    public func write(toAddress: UInt8, data: [UInt8]) throws {
         
     }
-    
-    public func write(_ buf: [UInt8], readBytes: UInt8) throws -> [UInt8] {
+    public func write(toAddress: UInt8, data: [UInt8], readBytes: UInt32) throws -> [UInt8] {
         fatalError()
     }
 }
