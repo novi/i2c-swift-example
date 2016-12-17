@@ -35,3 +35,9 @@ Build library and its demo
 ```
 make debug
 ```
+
+On Linux, you should probably run the demo with `sudo`
+
+```
+sudo .build/debug/I2CDetect
+```

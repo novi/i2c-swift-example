@@ -104,7 +104,7 @@ import Foundation
                 setBufferPtr(msg: &messages[messageIndex], buf: &readBuf!)
             }
             
-            //print("wrting...", messages)
+            //print("writing...", messages)
             
             var packets = i2c_rdwr_ioctl_data(msgs: &messages, nmsgs: UInt32(messages.count))
             let status = ioctl(i2c, UInt(I2C_RDWR), &packets)
