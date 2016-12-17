@@ -11,6 +11,7 @@
 		52BC0A7B1E0507E3008D74D7 /* I2CDeviceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 52BC0A6D1E0507E3008D74D7 /* I2CDeviceModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52BC0A8D1E0507F7008D74D7 /* I2C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC0A8A1E0507F0008D74D7 /* I2C.framework */; };
 		52BC0A901E050820008D74D7 /* ZTSeg8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0A8F1E050820008D74D7 /* ZTSeg8.swift */; };
+		52BC0AB31E051547008D74D7 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0AB21E051547008D74D7 /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		52BC0A7A1E0507E3008D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BC0A841E0507F0008D74D7 /* I2C.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2C.xcodeproj; path = ../I2C/I2C.xcodeproj; sourceTree = "<group>"; };
 		52BC0A8F1E050820008D74D7 /* ZTSeg8.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZTSeg8.swift; sourceTree = "<group>"; };
+		52BC0AB21E051547008D74D7 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		52BC0A8E1E050804008D74D7 /* I2CDeviceModule */ = {
 			isa = PBXGroup;
 			children = (
+				52BC0AB21E051547008D74D7 /* Device.swift */,
 				52BC0A8F1E050820008D74D7 /* ZTSeg8.swift */,
 			);
 			name = I2CDeviceModule;
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BC0A901E050820008D74D7 /* ZTSeg8.swift in Sources */,
+				52BC0AB31E051547008D74D7 /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
