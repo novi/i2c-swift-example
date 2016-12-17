@@ -1,6 +1,6 @@
 import XCTest
-@testable import I2C
+@testable import I2CTests
 
 XCTMain([
-    testCase(USBI2CTests.allTests),
+    testCase(I2CTests.allTests),
 ])

@@ -11,7 +11,7 @@
 		52BC0A4D1E050728008D74D7 /* I2C.h in Headers */ = {isa = PBXBuildFile; fileRef = 52BC0A3F1E050727008D74D7 /* I2C.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52BC0A591E050735008D74D7 /* I2CDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0A571E050735008D74D7 /* I2CDevice.swift */; };
 		52BC0A5A1E050735008D74D7 /* USBI2C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0A581E050735008D74D7 /* USBI2C.swift */; };
-		52BC0A5E1E050742008D74D7 /* USBI2CTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0A5C1E050742008D74D7 /* USBI2CTests.swift */; };
+		52BC0A5E1E050742008D74D7 /* I2CTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0A5C1E050742008D74D7 /* I2CTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +32,7 @@
 		52BC0A4C1E050728008D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BC0A571E050735008D74D7 /* I2CDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I2CDevice.swift; sourceTree = "<group>"; };
 		52BC0A581E050735008D74D7 /* USBI2C.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USBI2C.swift; sourceTree = "<group>"; };
-		52BC0A5C1E050742008D74D7 /* USBI2CTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = USBI2CTests.swift; sourceTree = "<group>"; };
+		52BC0A5C1E050742008D74D7 /* I2CTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = I2CTests.swift; sourceTree = "<group>"; };
 		52BC0A5D1E050742008D74D7 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LinuxMain.swift; path = ../../../Tests/LinuxMain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,7 +106,7 @@
 		52BC0A5B1E050742008D74D7 /* I2CTests */ = {
 			isa = PBXGroup;
 			children = (
-				52BC0A5C1E050742008D74D7 /* USBI2CTests.swift */,
+				52BC0A5C1E050742008D74D7 /* I2CTests.swift */,
 			);
 			name = I2CTests;
 			path = ../../../Tests/I2CTests;
@@ -232,7 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BC0A5E1E050742008D74D7 /* USBI2CTests.swift in Sources */,
+				52BC0A5E1E050742008D74D7 /* I2CTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
