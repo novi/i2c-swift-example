@@ -27,7 +27,7 @@ public final class DeviceWrap: I2CDevice {
 #if os(Linux)
 public func getCurrentI2CDevice() throws -> DeviceWrap {
     do {
-        return DeviceWrap(try KernelI2CDevice(portNumber: 0))
+        return DeviceWrap(try I2CBusDevice(portNumber: 0))
     } catch {
         print(error)
         print("trying to connect i2c tiny usb device...")

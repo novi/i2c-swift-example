@@ -12,7 +12,7 @@ import I2C
 #if os(Linux)
     public func getCurrentI2CDevice() throws -> I2CDevice {
         do {
-            return try KernelI2CDevice(portNumber: 0)
+            return try I2CBusDevice(portNumber: 0)
         } catch {
             print(error)
             print("trying to connect i2c tiny usb device...")
@@ -40,6 +40,17 @@ while addr <= 0x77 {
     
     print("sending... to", addrStr)
     
+#if os(Linux)
+    do {
+        if try device.write(toAddress: addr, data: [], readBytes: 0) == [] {
+            print("device found at", addrStr)
+        }
+    } catch I2CTinyUSB.USBDeviceError.USBI2CNoAckError {
+        // no device found
+    } catch I2CBusDevice.I2CError.noAckError {
+        // no device found
+    }
+#else
     do {
         if try device.write(toAddress: addr, data: [], readBytes: 0) == [] {
             print("device found at", addrStr)
@@ -47,6 +58,7 @@ while addr <= 0x77 {
     } catch I2CTinyUSB.USBDeviceError.USBI2CNoAckError {
         // no device found
     }
+#endif
     
     addr += 1
 }

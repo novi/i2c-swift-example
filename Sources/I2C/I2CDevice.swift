@@ -43,15 +43,16 @@ public extension I2CDevice {
 import Ci2c
     
 
-public final class KernelI2CDevice: I2CDevice {
+public final class I2CBusDevice: I2CDevice {
     
     public enum I2CError: Error {
         case deviceOpenError(UInt8, Int32)
         case slaveAddressSetError(Int32)
         case readOrWriteError(Int32)
+        case noAckError(Int32)
     }
     
-    /*private var currentAddress: UInt8 = 0
+    private var currentAddress: UInt8 = 0
     
     private func chageAddressIfNeeded(_ newAddress: UInt8) throws {
         guard currentAddress != newAddress else {
@@ -62,7 +63,7 @@ public final class KernelI2CDevice: I2CDevice {
             throw I2CError.slaveAddressSetError(status)
         }
         self.currentAddress = newAddress
-    }*/
+    }
     
     
     private let i2c: CInt
@@ -85,6 +86,17 @@ public final class KernelI2CDevice: I2CDevice {
     
     public func write(toAddress: UInt8, data: [UInt8], readBytes: UInt32) throws -> [UInt8] {
 
+        // send only start, stop
+        if data.count == 0 && readBytes == 0 {
+            try chageAddressIfNeeded(toAddress)
+            
+            let response = i2c_smbus_write_quick(i2c, UInt8(I2C_SMBUS_WRITE))
+            if response < 0 {
+                throw I2CError.noAckError(response)
+            }
+            return []
+        }
+        
         let writeLength = data.count
         
         var messageLength = 0

@@ -2,6 +2,7 @@
 
 This repository demonstrates how to control I2C devie using Swift. 
 
+* `Sources/I2CDetect`: Detect I2C Device on the bus
 * `Sources/I2CDeviceModule`: Some I2C module driver library, LED and sensors...
 * `Sources/Counter`: Counter demo for LED 8Seg module (ZT.SEG8B4A036A)
 * `Sources/LightSens`: Ambient Light Sensor demo (BH1750)
