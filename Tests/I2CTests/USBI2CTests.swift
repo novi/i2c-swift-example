@@ -1,5 +1,5 @@
 import XCTest
-@testable import i2clib
+@testable import I2C
 
 final class USBI2CTests: XCTestCase {
     

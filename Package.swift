@@ -1,9 +1,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "i2clib",
+    name: "I2C",
     targets: [
-                Target(name: "i2clib", dependencies: ["CUSB"]),
+                Target(name: "I2C", dependencies: ["CUSB"]),
                 Target(name: "CUSB"),
                  ],
     dependencies: [],
