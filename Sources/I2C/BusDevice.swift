@@ -21,10 +21,10 @@ import Foundation
     public final class I2CBusDevice: I2CDevice {
         
         public enum I2CError: Error {
-            case deviceOpenError(UInt8, Int32)
-            case slaveAddressSetError(Int32)
-            case readOrWriteError(Int32)
-            case noAckError(Int32)
+            case deviceOpenError(portNumber: UInt8, returns: Int32, errno: Int32)
+            case slaveAddressSetError(Int32, Int32)
+            case readOrWriteError(Int32, Int32)
+            case noAckError(Int32, Int32)
         }
         
         private var currentAddress: UInt8 = 0
@@ -35,7 +35,7 @@ import Foundation
             }
             let status = ioctl(i2c, UInt(I2C_SLAVE), CInt(newAddress))
             guard status == 0 else {
-                throw I2CError.slaveAddressSetError(status)
+                throw I2CError.slaveAddressSetError(status, errno)
             }
             self.currentAddress = newAddress
         }
@@ -46,7 +46,7 @@ import Foundation
         public init(portNumber: UInt8) throws {
             let fd = open("/dev/i2c-\(portNumber)", O_RDWR)
             guard fd != -1 else {
-                throw I2CError.deviceOpenError(portNumber, fd)
+                throw I2CError.deviceOpenError(portNumber: portNumber, returns: fd, errno: errno)
             }
             self.i2c = fd
         }
@@ -67,7 +67,7 @@ import Foundation
                 
                 let response = i2c_smbus_write_quick(i2c, UInt8(I2C_SMBUS_WRITE))
                 if response < 0 {
-                    throw I2CError.noAckError(response)
+                    throw I2CError.noAckError(response, errno)
                 }
                 return []
             }
@@ -109,7 +109,7 @@ import Foundation
             var packets = i2c_rdwr_ioctl_data(msgs: &messages, nmsgs: UInt32(messages.count))
             let status = ioctl(i2c, UInt(I2C_RDWR), &packets)
             guard status >= 0 else {
-                throw I2CError.readOrWriteError(status)
+                throw I2CError.readOrWriteError(status, errno)
             }
             
             if let buf = readBuf {
