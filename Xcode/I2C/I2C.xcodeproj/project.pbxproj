@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		528C6B661E0565CB006E6040 /* BusDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C6B651E0565CB006E6040 /* BusDevice.swift */; };
 		52BC0A461E050727008D74D7 /* I2C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC0A3C1E050727008D74D7 /* I2C.framework */; };
 		52BC0A4D1E050728008D74D7 /* I2C.h in Headers */ = {isa = PBXBuildFile; fileRef = 52BC0A3F1E050727008D74D7 /* I2C.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		52BC0A591E050735008D74D7 /* I2CDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0A571E050735008D74D7 /* I2CDevice.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		528C6B651E0565CB006E6040 /* BusDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusDevice.swift; sourceTree = "<group>"; };
 		52BC0A3C1E050727008D74D7 /* I2C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = I2C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BC0A3F1E050727008D74D7 /* I2C.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = I2C.h; sourceTree = "<group>"; };
 		52BC0A401E050727008D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				52BC0A571E050735008D74D7 /* I2CDevice.swift */,
+				528C6B651E0565CB006E6040 /* BusDevice.swift */,
 				52BC0A581E050735008D74D7 /* USBI2C.swift */,
 			);
 			name = I2C;
@@ -224,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52BC0A591E050735008D74D7 /* I2CDevice.swift in Sources */,
+				528C6B661E0565CB006E6040 /* BusDevice.swift in Sources */,
 				52BC0A5A1E050735008D74D7 /* USBI2C.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +441,7 @@
 				52BC0A521E050728008D74D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52BC0A531E050728008D74D7 /* Build configuration list for PBXNativeTarget "I2CTests" */ = {
 			isa = XCConfigurationList;
@@ -445,6 +450,7 @@
 				52BC0A551E050728008D74D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
