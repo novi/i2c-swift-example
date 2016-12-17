@@ -16,7 +16,7 @@ final class USBI2CTests: XCTestCase {
             
             print("sending... to", addrStr)
             
-            if try device.sendAck(addr: addr) {
+            if try device.write(toAddress: addr, data: [], readBytes: 0) == [] {
                 print("device found at", addrStr)
             }
             addr += 1
@@ -30,7 +30,7 @@ final class USBI2CTests: XCTestCase {
         
         let device = try I2CTinyUSB()
         
-        XCTAssertTrue(try device.sendAck(addr: 0x23))
+        XCTAssertTrue(try device.write(toAddress: 0x23, data: [], readBytes: 0) == [])
         
         device.closeDevice()
     }
