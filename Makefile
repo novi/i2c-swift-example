@@ -1,4 +1,4 @@
-BUILD_OPTS=-Xlinker -L/usr/local/lib
+BUILD_OPTS=-Xlinker -L/usr/lib -Xlinker -lusb
 
 SWIFTC=swiftc
 SWIFT=swift
@@ -25,10 +25,10 @@ build_:
 	$(SWIFT) build --configuration $(CONF_ENV) $(BUILD_OPTS)
 	
 clean:
-	$(SWIFT) build package clean
+	$(SWIFT) package clean
 	
 distclean:
-	$(SWIFT) build package reset
+	$(SWIFT) package reset
 
 test:
 	$(SWIFT) test $(BUILD_OPTS)

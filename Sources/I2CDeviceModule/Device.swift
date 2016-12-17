@@ -23,3 +23,22 @@ public final class DeviceWrap: I2CDevice {
         return try device.write(toAddress: toAddress, data: data, readBytes: readBytes)
     }
 }
+
+#if os(Linux)
+public func getCurrentI2CDevice() throws -> DeviceWrap {
+    do {
+        return DeviceWrap(try KernelI2CDevice(portNumber: 0))
+    } catch {
+        print(error)
+        print("trying to connect i2c tiny usb device...")
+        return try DeviceWrap(I2CTinyUSB())
+    }
+}
+    
+#else
+    
+public func getCurrentI2CDevice() throws -> DeviceWrap {
+    return try DeviceWrap(I2CTinyUSB())
+}
+
+#endif

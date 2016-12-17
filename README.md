@@ -26,7 +26,7 @@ $ brew install libusb-compat libusb
 
 
 ```
-$ sudo apt-get install 
+$ sudo apt-get install i2c-tools libi2c-dev libusb-dev
 ```
 
 Build library and its demo

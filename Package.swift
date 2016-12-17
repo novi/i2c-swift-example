@@ -5,9 +5,12 @@ let package = Package(
     targets: [
                 Target(name: "Counter", dependencies: ["I2CDeviceModule"]),
                 Target(name: "I2CDeviceModule", dependencies: ["I2C"]),
+                Target(name: "I2CDetect", dependencies: ["I2C"]),
                 Target(name: "I2C", dependencies: ["CUSB"]),
-                Target(name: "CUSB"),
+                Target(name: "CUSB")
                  ],
-    dependencies: [],
+    dependencies: [
+        .Package(url: "https://www.github.com/sixtyfiveford/Ci2c.swift.git", majorVersion: 1),
+    ],
     exclude: ["Xcode"]
 )

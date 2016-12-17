@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52BC0AD31E055EAE008D74D7 /* I2C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC0AD01E055EA8008D74D7 /* I2C.framework */; };
+		52BC0AD51E055EB7008D74D7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0AD41E055EB7008D74D7 /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52BC0ACF1E055EA8008D74D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52BC0A3C1E050727008D74D7;
+			remoteInfo = I2C;
+		};
+		52BC0AD11E055EA8008D74D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52BC0A451E050727008D74D7;
+			remoteInfo = I2CTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52BC0ABE1E055E84008D74D7 /* I2CDetect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = I2CDetect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52BC0AC31E055E84008D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2C.xcodeproj; path = ../I2C/I2C.xcodeproj; sourceTree = "<group>"; };
+		52BC0AD41E055EB7008D74D7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52BC0ABC1E055E84008D74D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BC0AD31E055EAE008D74D7 /* I2C.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52BC0AB61E055E84008D74D7 = {
+			isa = PBXGroup;
+			children = (
+				52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */,
+				52BC0AC01E055E84008D74D7 /* I2CDetect */,
+				52BC0ABF1E055E84008D74D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52BC0ABF1E055E84008D74D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52BC0ABE1E055E84008D74D7 /* I2CDetect.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52BC0AC01E055E84008D74D7 /* I2CDetect */ = {
+			isa = PBXGroup;
+			children = (
+				52BC0AC91E055E9B008D74D7 /* I2CDetect */,
+				52BC0AC31E055E84008D74D7 /* Info.plist */,
+			);
+			path = I2CDetect;
+			sourceTree = "<group>";
+		};
+		52BC0AC91E055E9B008D74D7 /* I2CDetect */ = {
+			isa = PBXGroup;
+			children = (
+				52BC0AD41E055EB7008D74D7 /* main.swift */,
+			);
+			name = I2CDetect;
+			path = ../../../Sources/I2CDetect;
+			sourceTree = "<group>";
+		};
+		52BC0ACB1E055EA8008D74D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52BC0AD01E055EA8008D74D7 /* I2C.framework */,
+				52BC0AD21E055EA8008D74D7 /* I2CTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52BC0ABD1E055E84008D74D7 /* I2CDetect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52BC0AC61E055E84008D74D7 /* Build configuration list for PBXNativeTarget "I2CDetect" */;
+			buildPhases = (
+				52BC0ABB1E055E84008D74D7 /* Sources */,
+				52BC0ABC1E055E84008D74D7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = I2CDetect;
+			productName = I2CDetect;
+			productReference = 52BC0ABE1E055E84008D74D7 /* I2CDetect.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52BC0AB71E055E84008D74D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					52BC0ABD1E055E84008D74D7 = {
+						CreatedOnToolsVersion = 8.2;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52BC0ABA1E055E84008D74D7 /* Build configuration list for PBXProject "I2CDetect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52BC0AB61E055E84008D74D7;
+			productRefGroup = 52BC0ABF1E055E84008D74D7 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52BC0ACB1E055EA8008D74D7 /* Products */;
+					ProjectRef = 52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52BC0ABD1E055E84008D74D7 /* I2CDetect */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52BC0AD01E055EA8008D74D7 /* I2C.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = I2C.framework;
+			remoteRef = 52BC0ACF1E055EA8008D74D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52BC0AD21E055EA8008D74D7 /* I2CTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = I2CTests.xctest;
+			remoteRef = 52BC0AD11E055EA8008D74D7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52BC0ABB1E055E84008D74D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52BC0AD51E055EB7008D74D7 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52BC0AC41E055E84008D74D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52BC0AC51E055E84008D74D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52BC0AC71E055E84008D74D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = I2CDetect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.I2CDetect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52BC0AC81E055E84008D74D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = I2CDetect/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.I2CDetect;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52BC0ABA1E055E84008D74D7 /* Build configuration list for PBXProject "I2CDetect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52BC0AC41E055E84008D74D7 /* Debug */,
+				52BC0AC51E055E84008D74D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52BC0AC61E055E84008D74D7 /* Build configuration list for PBXNativeTarget "I2CDetect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52BC0AC71E055E84008D74D7 /* Debug */,
+				52BC0AC81E055E84008D74D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52BC0AB71E055E84008D74D7 /* Project object */;
+}

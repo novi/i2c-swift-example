@@ -18,7 +18,7 @@ final class MyZT8Seg: ZT8SegDevice {
     }
 }
 
-let zt8 = try MyZT8Seg(I2CTinyUSB())
+let zt8 = try MyZT8Seg(getCurrentI2CDevice())
 
 try zt8.resume()
 
