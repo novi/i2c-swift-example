@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		52BC0AD31E055EAE008D74D7 /* I2C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC0AD01E055EA8008D74D7 /* I2C.framework */; };
+		528C6BCA1E0678BA006E6040 /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528C6BC01E06789A006E6040 /* I2CDeviceModule.framework */; };
 		52BC0AD51E055EB7008D74D7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BC0AD41E055EB7008D74D7 /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		52BC0ACF1E055EA8008D74D7 /* PBXContainerItemProxy */ = {
+		528C6BBF1E06789A006E6040 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */;
+			containerPortal = 528C6BBA1E06789A006E6040 /* I2CDeviceModule.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 52BC0A3C1E050727008D74D7;
-			remoteInfo = I2C;
+			remoteGlobalIDString = 52BC0A6A1E0507E3008D74D7;
+			remoteInfo = I2CDeviceModule;
 		};
-		52BC0AD11E055EA8008D74D7 /* PBXContainerItemProxy */ = {
+		528C6BC11E06789A006E6040 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */;
+			containerPortal = 528C6BBA1E06789A006E6040 /* I2CDeviceModule.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 52BC0A451E050727008D74D7;
-			remoteInfo = I2CTests;
+			remoteGlobalIDString = 52BC0A731E0507E3008D74D7;
+			remoteInfo = I2CDeviceModuleTests;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		528C6BBA1E06789A006E6040 /* I2CDeviceModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2CDeviceModule.xcodeproj; path = ../I2CDeviceModule/I2CDeviceModule.xcodeproj; sourceTree = "<group>"; };
 		52BC0ABE1E055E84008D74D7 /* I2CDetect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = I2CDetect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BC0AC31E055E84008D74D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2C.xcodeproj; path = ../I2C/I2C.xcodeproj; sourceTree = "<group>"; };
 		52BC0AD41E055EB7008D74D7 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -40,17 +40,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52BC0AD31E055EAE008D74D7 /* I2C.framework in Frameworks */,
+				528C6BCA1E0678BA006E6040 /* I2CDeviceModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		528C6BBB1E06789A006E6040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				528C6BC01E06789A006E6040 /* I2CDeviceModule.framework */,
+				528C6BC21E06789A006E6040 /* I2CDeviceModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		52BC0AB61E055E84008D74D7 = {
 			isa = PBXGroup;
 			children = (
-				52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */,
+				528C6BBA1E06789A006E6040 /* I2CDeviceModule.xcodeproj */,
 				52BC0AC01E055E84008D74D7 /* I2CDetect */,
 				52BC0ABF1E055E84008D74D7 /* Products */,
 			);
@@ -80,15 +89,6 @@
 			);
 			name = I2CDetect;
 			path = ../../../Sources/I2CDetect;
-			sourceTree = "<group>";
-		};
-		52BC0ACB1E055EA8008D74D7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				52BC0AD01E055EA8008D74D7 /* I2C.framework */,
-				52BC0AD21E055EA8008D74D7 /* I2CTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +139,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 52BC0ACB1E055EA8008D74D7 /* Products */;
-					ProjectRef = 52BC0ACA1E055EA8008D74D7 /* I2C.xcodeproj */;
+					ProductGroup = 528C6BBB1E06789A006E6040 /* Products */;
+					ProjectRef = 528C6BBA1E06789A006E6040 /* I2CDeviceModule.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -151,18 +151,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		52BC0AD01E055EA8008D74D7 /* I2C.framework */ = {
+		528C6BC01E06789A006E6040 /* I2CDeviceModule.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = I2C.framework;
-			remoteRef = 52BC0ACF1E055EA8008D74D7 /* PBXContainerItemProxy */;
+			path = I2CDeviceModule.framework;
+			remoteRef = 528C6BBF1E06789A006E6040 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		52BC0AD21E055EA8008D74D7 /* I2CTests.xctest */ = {
+		528C6BC21E06789A006E6040 /* I2CDeviceModuleTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = I2CTests.xctest;
-			remoteRef = 52BC0AD11E055EA8008D74D7 /* PBXContainerItemProxy */;
+			path = I2CDeviceModuleTests.xctest;
+			remoteRef = 528C6BC11E06789A006E6040 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -302,6 +302,7 @@
 				52BC0AC81E055E84008D74D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

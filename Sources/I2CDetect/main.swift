@@ -7,26 +7,8 @@
 //
 
 import Foundation
+import I2CDeviceModule
 import I2C
-
-#if os(Linux)
-    public func getCurrentI2CDevice() throws -> I2CDevice {
-        do {
-            return try I2CBusDevice(portNumber: 0)
-        } catch {
-            print(error)
-            print("trying to connect i2c tiny usb device...")
-            return try I2CTinyUSB()
-        }
-    }
-    
-#else
-    
-    public func getCurrentI2CDevice() throws -> I2CDevice {
-        return try I2CTinyUSB()
-    }
-    
-#endif
 
 
 let device = try getCurrentI2CDevice()

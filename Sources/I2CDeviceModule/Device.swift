@@ -6,6 +6,7 @@
 //  Copyright © 2016 Yusuke Ito. All rights reserved.
 //
 
+import Foundation
 import I2C
 
 public final class DeviceWrap: I2CDevice {
@@ -26,13 +27,16 @@ public final class DeviceWrap: I2CDevice {
 
 #if os(Linux)
 public func getCurrentI2CDevice() throws -> DeviceWrap {
-    do {
-        return DeviceWrap(try I2CBusDevice(portNumber: 0))
-    } catch {
-        print(error)
-        print("trying to connect i2c tiny usb device...")
-        return try DeviceWrap(I2CTinyUSB())
+    
+    for i in 0..<10 {
+        if FileManager.default.fileExists(atPath: "/dev/i2c-\(i)") {
+            print("/dev/i2c-\(i) found")
+            return DeviceWrap(try I2CBusDevice(portNumber: UInt8(i) ))
+        }
     }
+    
+    print("trying to connect i2c tiny usb device...")
+    return try DeviceWrap(I2CTinyUSB())
 }
     
 #else

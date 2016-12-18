@@ -6,8 +6,8 @@ let package = Package(
                 Target(name: "LightSensDisplay", dependencies: ["I2CDeviceModule"]),
                 Target(name: "LightSens", dependencies: ["I2CDeviceModule"]),
                 Target(name: "Counter", dependencies: ["I2CDeviceModule"]),
+                Target(name: "I2CDetect", dependencies: ["I2CDeviceModule"]),
                 Target(name: "I2CDeviceModule", dependencies: ["I2C"]),
-                Target(name: "I2CDetect", dependencies: ["I2C"]),
                 Target(name: "I2C", dependencies: ["CUSB"]),
                 Target(name: "CUSB")
                  ],
