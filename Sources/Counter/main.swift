@@ -28,10 +28,12 @@ var i = 0
 while true {
     
     // as integer
-    try zt8.setString("\(i)")
+    let str = "\(i)"
     
     // as hex
-    //try zt8.setString(String(format: "%x", i))
+    //let str = String(format: "%x", i)
+    
+    try zt8.setString(str)
     
     usleep(100 * 1000)
     
