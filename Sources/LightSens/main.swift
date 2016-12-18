@@ -18,6 +18,7 @@ try module.powerOn()
 try module.change(mode: .continuouslyHighres)
 
 while true {
+    
     usleep(200 * 1000)
     
     let value = try module.readLxValue()

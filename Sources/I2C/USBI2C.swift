@@ -92,6 +92,7 @@ public final class I2CTinyUSB {
     fileprivate let CMD_I2C_IO = 4 as Int32
     fileprivate let CMD_I2C_BEGIN = 1 as Int32 // flag to I2C_IO
     fileprivate let CMD_I2C_END = 2 as Int32 // flag to I2C_IO
+    fileprivate let I2C_M_RD = 0x01 as Int32
 
     fileprivate let TimeoutControl = 1000 as Int32
     fileprivate let TimeoutI2CBus = 1000 as Int32
@@ -187,11 +188,9 @@ extension I2CTinyUSB: I2CDevice {
         if nBytes < 0 {
             throw USBDeviceError.USBI2CWriteError
         }
-        if sendStop {
-            // check ACK
-            if try getStatus() != .addressACK {
-                throw USBDeviceError.USBI2CNoAckError
-            }
+        // check ACK
+        if try getStatus() != .addressACK {
+            throw USBDeviceError.USBI2CNoAckError
         }
     }
     
@@ -212,13 +211,14 @@ extension I2CTinyUSB: I2CDevice {
         if readBytes > 0 {
             var readBuffer = [Int8](repeating: 0, count: Int(readBytes))
             // read data and end control flow
-            let nBytes = usb_control_msg(usb, USB_CTRL_IN, CMD_I2C_IO + (writeLength > 0 ? 0 : CMD_I2C_BEGIN) + CMD_I2C_END, 0, Int32(toAddress), &readBuffer, Int32(readBytes), TimeoutI2CBus)
+            let nBytes = usb_control_msg(usb, USB_CTRL_IN, CMD_I2C_IO + (writeLength > 0 ? 0 : CMD_I2C_BEGIN) + CMD_I2C_END, I2C_M_RD, Int32(toAddress), &readBuffer, Int32(readBytes), TimeoutI2CBus)
             if nBytes < 0 {
                 throw USBDeviceError.USBI2CReadError
             }
             if try getStatus() != .addressACK {
                 throw USBDeviceError.USBI2CNoAckError
             }
+            //print("read", readBuffer)
             return unsafeBitCast(readBuffer, to: [UInt8].self)
         }
         

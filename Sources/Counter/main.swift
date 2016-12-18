@@ -22,6 +22,8 @@ let zt8 = try MyZT8Seg(getCurrentI2CDevice())
 
 try zt8.resume()
 
+print("module version", try zt8.getVersion())
+
 var i = 0
 while true {
     

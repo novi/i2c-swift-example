@@ -20,7 +20,7 @@ public final class BH1750 {
 
 extension BH1750 {
     
-    private enum OpCode: UInt8 {
+    fileprivate enum OpCode: UInt8 {
         case powerDown = 0
         case powerOn = 0x1
         case reset = 0x7
@@ -48,24 +48,33 @@ extension BH1750 {
     
     public func powerOn() throws {
         try device.write(toAddress: address, data: [OpCode.powerOn.rawValue])
+        usleep(10 * 1000)
     }
     
     public func change(mode: MeasurementMode) throws {
         try device.write(toAddress: address, data: [mode.opCode.rawValue])
+        usleep(1 * 1000)
     }
     
-    // bit layout
-    // MSB
-    // 2^14 2^13 2^12 2^11 2^10 2^9 2^8 2^7 ... 2^6 2^5 2^4 2^3 2^2 2^1 2^0 2^-1
     public func readRawData() throws -> UInt16 {
         let buf = try device.read(toAddress: address, readBytes: 2)
-        let value = UnsafePointer(buf).withMemoryRebound(to: UInt16.self, capacity: 1) {
+        // swap high and low bytes
+        let value = UnsafePointer(buf.reversed()).withMemoryRebound(to: UInt16.self, capacity: 1) {
             $0.pointee
         }
+        //print(buf, value)
         return value
     }
     
     public func readLxValue() throws -> Double {
+        return Double(try readRawData()) / 1.2
+    }
+    
+    // bit layout in highres mode 2
+    // MSB
+    // 2^14 2^13 2^12 2^11 2^10 2^9 2^8 2^7 ... 2^6 2^5 2^4 2^3 2^2 2^1 2^0 2^-1
+    // for high res mode
+    public func readLxValue2() throws -> Double {
         var value = try readRawData()
         let lsb = value & 0x1
         value = (value >> 1) & 0x7f

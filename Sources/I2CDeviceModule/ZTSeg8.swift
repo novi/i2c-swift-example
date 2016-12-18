@@ -85,7 +85,7 @@ public extension ZT8SegDevice {
     
     func getVersion() throws -> String {
         let readData = try device.write(toAddress: address, data: [Register.version.rawValue], readBytes: 19)
-        guard let version = String(data: Data(readData), encoding: .utf8) else {
+        guard let version = String(data: Data(readData + [0]), encoding: .utf8) else {
             throw ZT8SegError.invalidVersion(readData)
         }
         return version
