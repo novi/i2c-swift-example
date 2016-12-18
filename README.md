@@ -41,3 +41,5 @@ On Linux, you should probably run the demo with `sudo`.
 ```
 sudo .build/debug/I2CDetect
 ```
+
+![](raw/master/demo.gif)
