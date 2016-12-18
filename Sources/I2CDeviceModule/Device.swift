@@ -9,7 +9,7 @@
 import I2C
 
 public final class DeviceWrap: I2CDevice {
-    private let device: I2CDevice
+    public let device: I2CDevice
     
     public init<D: I2CDevice>(_ d: D) {
         self.device = d

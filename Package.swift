@@ -3,6 +3,7 @@ import PackageDescription
 let package = Package(
     name: "I2C",
     targets: [
+                Target(name: "LightSens", dependencies: ["I2CDeviceModule"]),
                 Target(name: "Counter", dependencies: ["I2CDeviceModule"]),
                 Target(name: "I2CDeviceModule", dependencies: ["I2C"]),
                 Target(name: "I2CDetect", dependencies: ["I2C"]),
