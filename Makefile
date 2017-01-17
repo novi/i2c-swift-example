@@ -1,4 +1,4 @@
-BUILD_OPTS=-Xlinker -L/usr/lib -Xlinker -lusb
+BUILD_OPTS=-Xlinker -L/usr/lib
 
 SWIFTC=swiftc
 SWIFT=swift

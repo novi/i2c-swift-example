@@ -34,9 +34,7 @@ public func getCurrentI2CDevice() throws -> DeviceWrap {
             return DeviceWrap(try I2CBusDevice(portNumber: UInt8(i) ))
         }
     }
-    
-    print("trying to connect i2c tiny usb device...")
-    return try DeviceWrap(I2CTinyUSB())
+    fatalError("no i2c device file")
 }
     
 #else

@@ -1,6 +1,6 @@
 # i2c-swift-example
 
-This repository demonstrates how to control I2C devie using Swift. 
+This repository demonstrates how to control I2C devie with Swift. The library page is [here](https://github.com/novi/i2c-swift).
 
 * `Sources/I2CDetect`: Detect I2C Device on the bus
 * `Sources/I2CDeviceModule`: Some I2C module driver library, LED and sensors...
@@ -27,7 +27,7 @@ $ brew install libusb-compat libusb
 
 
 ```
-$ sudo apt-get install i2c-tools libi2c-dev libusb-dev
+$ sudo apt-get install i2c-tools libi2c-dev
 ```
 
 Build library and its demo.
