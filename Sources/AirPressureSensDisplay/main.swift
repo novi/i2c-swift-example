@@ -20,6 +20,7 @@ let zt8 = try MyZT8Seg(device)
 
 try zt8.resume()
 
+
 print("LED module version", try zt8.getVersion())
 
 while true {
@@ -30,6 +31,12 @@ while true {
     
     let temp = Float(result.temperature) / 10
     try zt8.setString("\(UInt(temp))")
+    
+    sleep(1)
+    
+    let fahrenheit = 1.8 * Float(result.temperature) / 10 + 32
+    let fVal = UInt(fahrenheit)
+    try zt8.setString("\(fVal)F")
     
     sleep(1)
     
