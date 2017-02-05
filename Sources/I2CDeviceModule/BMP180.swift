@@ -169,8 +169,8 @@ public extension BMP180 {
             let utMSB = Int64(try readRegister(.outMSB))
             let ut = (utMSB << 8) | utLSB
             
-            let x1 = (ut - Int64(calibration.AC6)) * (Int64(calibration.AC5) >> 15)
-            let x2 = Int64(calibration.MC >> 11) / (x1 + Int64(calibration.MD))
+            let x1 = ((ut - Int64(calibration.AC6)) * Int64(calibration.AC5)) >> 15
+            let x2 = (Int64(calibration.MC) << 11) / (x1 + Int64(calibration.MD))
             b5 = x1 + x2
             t = (b5 + 8) >> 4
         }
@@ -185,12 +185,18 @@ public extension BMP180 {
             let up = Int64(upMSB << 16 | upLSB << 8 | upXLSB) >> Int64(8-oss.rawValue)
             
             let b6 = (b5 - 4000)
-            let x1 = (((b6 * b6) >> 12) * Int64(calibration.B2)) >> 11
-            let x2 = (Int64(calibration.AC2) * b6) >> 11
-            let x3 = x1 + x2
-            let b3 = ( (((Int64(calibration.AC1) * 4) + x3) << Int64(oss.rawValue)) + 2 ) >> 2
+            
+            var x1 = ((Int64(calibration.B2) * ((b6 * b6) >> 12) )) >> 11
+            var x2 = (Int64(calibration.AC2) * b6) >> 11
+            var x3 = x1 + x2
+            let b3 = ( (((Int64(calibration.AC1) * 4) + x3) << Int64(oss.rawValue)) + 2 ) / 4
+            
+            x1 = (Int64(calibration.AC4) * b6) >> 13
+            x2 = ((Int64(calibration.B1) * ((b6 * b6) >> 12) )) >> 16
+            x3 = (x1 + x2 + 2) >> 2
             let b4 = (Int64(calibration.AC4) * (x3 + 32768)) >> 15
-            let b7 = (up - b3) * (5000 >> Int64(oss.rawValue))
+            let b7 = (up - b3) * (50000 >> Int64(oss.rawValue))
+            
             let p0: Int64
             if b7 < 0x80000000 {
                 p0 = (b7 << 1) / b4

@@ -14,6 +14,8 @@ let device = try getCurrentI2CDevice()
 
 let sensor = BMP180(device: device)
 
+try sensor.calibrate()
+
 let zt8 = try MyZT8Seg(device)
 
 try zt8.resume()
@@ -23,6 +25,8 @@ print("LED module version", try zt8.getVersion())
 while true {
     
     let result = try sensor.mesure(oversampling: .oss3)
+    
+    print(result)
     
     let temp = Float(result.temperature) / 10
     try zt8.setString("\(UInt(temp))")
