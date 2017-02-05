@@ -7,6 +7,8 @@ This repository demonstrates how to control I2C devie with Swift. The library pa
 * `Sources/Counter`: Counter demo for LED 8Seg module (ZT.SEG8B4A036A)
 * `Sources/LightSens`: Ambient Light Sensor demo (BH1750)
 * `Sources/LightSensDisplay`: Combine with LED and light sensor the above
+* `Sources/AirPressureSens`: Air Pressure Sensor demo (BMP180)
+* `Sources/AirPressureSensDisplay`: Combine with LED and air pressure sensor
 
 ## Supported Platform
 
