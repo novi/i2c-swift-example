@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		524741871E472E8E005027BD /* BMP180.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524741861E472E8E005027BD /* BMP180.swift */; };
 		528C6B881E065FBD006E6040 /* BH1750.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C6B871E065FBD006E6040 /* BH1750.swift */; };
 		52BC0A741E0507E3008D74D7 /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BC0A6A1E0507E3008D74D7 /* I2CDeviceModule.framework */; };
 		52BC0A7B1E0507E3008D74D7 /* I2CDeviceModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 52BC0A6D1E0507E3008D74D7 /* I2CDeviceModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		524741861E472E8E005027BD /* BMP180.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMP180.swift; sourceTree = "<group>"; };
 		528C6B871E065FBD006E6040 /* BH1750.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BH1750.swift; sourceTree = "<group>"; };
 		52BC0A6A1E0507E3008D74D7 /* I2CDeviceModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = I2CDeviceModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BC0A6D1E0507E3008D74D7 /* I2CDeviceModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = I2CDeviceModule.h; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				52BC0AB21E051547008D74D7 /* Device.swift */,
 				52BC0A8F1E050820008D74D7 /* ZTSeg8.swift */,
 				528C6B871E065FBD006E6040 /* BH1750.swift */,
+				524741861E472E8E005027BD /* BMP180.swift */,
 			);
 			name = I2CDeviceModule;
 			path = ../../../Sources/I2CDeviceModule;
@@ -265,6 +268,7 @@
 				528C6B881E065FBD006E6040 /* BH1750.swift in Sources */,
 				52BC0A901E050820008D74D7 /* ZTSeg8.swift in Sources */,
 				52BC0AB31E051547008D74D7 /* Device.swift in Sources */,
+				524741871E472E8E005027BD /* BMP180.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

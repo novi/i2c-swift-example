@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		528C6BB21E06741E006E6040 /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 528C6BAF1E067418006E6040 /* I2CDeviceModule.framework */; };
-		528C6BB51E06743B006E6040 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528C6BB41E06743B006E6040 /* main.swift */; };
+		524741A91E474041005027BD /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 524741A61E474039005027BD /* I2CDeviceModule.framework */; };
+		524741B11E4740E5005027BD /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524741B01E4740E5005027BD /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		528C6BAE1E067418006E6040 /* PBXContainerItemProxy */ = {
+		524741A51E474039005027BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 528C6BA81E067418006E6040 /* I2CDeviceModule.xcodeproj */;
+			containerPortal = 5247419F1E474039005027BD /* I2CDeviceModule.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 52BC0A6A1E0507E3008D74D7;
 			remoteInfo = I2CDeviceModule;
 		};
-		528C6BB01E067418006E6040 /* PBXContainerItemProxy */ = {
+		524741A71E474039005027BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 528C6BA81E067418006E6040 /* I2CDeviceModule.xcodeproj */;
+			containerPortal = 5247419F1E474039005027BD /* I2CDeviceModule.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 52BC0A731E0507E3008D74D7;
 			remoteInfo = I2CDeviceModuleTests;
@@ -29,157 +29,156 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		528C6B9D1E06740F006E6040 /* LightSensDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LightSensDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		528C6BA21E06740F006E6040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		528C6BA81E067418006E6040 /* I2CDeviceModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2CDeviceModule.xcodeproj; path = ../I2CDeviceModule/I2CDeviceModule.xcodeproj; sourceTree = "<group>"; };
-		528C6BB41E06743B006E6040 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		524741921E474025005027BD /* AirPressureSens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPressureSens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		524741971E474025005027BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5247419F1E474039005027BD /* I2CDeviceModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2CDeviceModule.xcodeproj; path = ../I2CDeviceModule/I2CDeviceModule.xcodeproj; sourceTree = "<group>"; };
+		524741B01E4740E5005027BD /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		528C6B9B1E06740F006E6040 /* Frameworks */ = {
+		524741901E474025005027BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528C6BB21E06741E006E6040 /* I2CDeviceModule.framework in Frameworks */,
+				524741A91E474041005027BD /* I2CDeviceModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		528C6B951E06740F006E6040 = {
+		5247418A1E474025005027BD = {
 			isa = PBXGroup;
 			children = (
-				528C6BA81E067418006E6040 /* I2CDeviceModule.xcodeproj */,
-				528C6B9F1E06740F006E6040 /* LightSensDisplay */,
-				528C6B9E1E06740F006E6040 /* Products */,
+				5247419F1E474039005027BD /* I2CDeviceModule.xcodeproj */,
+				524741941E474025005027BD /* AirPressureSens */,
+				524741931E474025005027BD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		528C6B9E1E06740F006E6040 /* Products */ = {
+		524741931E474025005027BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				528C6B9D1E06740F006E6040 /* LightSensDisplay.app */,
+				524741921E474025005027BD /* AirPressureSens.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		528C6B9F1E06740F006E6040 /* LightSensDisplay */ = {
+		524741941E474025005027BD /* AirPressureSens */ = {
 			isa = PBXGroup;
 			children = (
-				528C6BB31E067433006E6040 /* LightSensDisplay */,
-				528C6BA21E06740F006E6040 /* Info.plist */,
+				524741AF1E4740E5005027BD /* AirPressureSens */,
+				524741971E474025005027BD /* Info.plist */,
 			);
-			path = LightSensDisplay;
+			path = AirPressureSens;
 			sourceTree = "<group>";
 		};
-		528C6BA91E067418006E6040 /* Products */ = {
+		524741A01E474039005027BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				528C6BAF1E067418006E6040 /* I2CDeviceModule.framework */,
-				528C6BB11E067418006E6040 /* I2CDeviceModuleTests.xctest */,
+				524741A61E474039005027BD /* I2CDeviceModule.framework */,
+				524741A81E474039005027BD /* I2CDeviceModuleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		528C6BB31E067433006E6040 /* LightSensDisplay */ = {
+		524741AF1E4740E5005027BD /* AirPressureSens */ = {
 			isa = PBXGroup;
 			children = (
-				528C6BB41E06743B006E6040 /* main.swift */,
+				524741B01E4740E5005027BD /* main.swift */,
 			);
-			name = LightSensDisplay;
-			path = ../../../Sources/LightSensDisplay;
+			name = AirPressureSens;
+			path = ../../../Sources/AirPressureSens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		528C6B9C1E06740F006E6040 /* LightSensDisplay */ = {
+		524741911E474025005027BD /* AirPressureSens */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 528C6BA51E06740F006E6040 /* Build configuration list for PBXNativeTarget "LightSensDisplay" */;
+			buildConfigurationList = 5247419A1E474025005027BD /* Build configuration list for PBXNativeTarget "AirPressureSens" */;
 			buildPhases = (
-				528C6B9A1E06740F006E6040 /* Sources */,
-				528C6B9B1E06740F006E6040 /* Frameworks */,
+				5247418F1E474025005027BD /* Sources */,
+				524741901E474025005027BD /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = LightSensDisplay;
-			productName = LightSensDisplay;
-			productReference = 528C6B9D1E06740F006E6040 /* LightSensDisplay.app */;
+			name = AirPressureSens;
+			productName = AirPressureSens;
+			productReference = 524741921E474025005027BD /* AirPressureSens.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		528C6B961E06740F006E6040 /* Project object */ = {
+		5247418B1E474025005027BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Yusuke Ito";
 				TargetAttributes = {
-					528C6B9C1E06740F006E6040 = {
-						CreatedOnToolsVersion = 8.2;
-						LastSwiftMigration = 0820;
+					524741911E474025005027BD = {
+						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 528C6B991E06740F006E6040 /* Build configuration list for PBXProject "LightSensDisplay" */;
+			buildConfigurationList = 5247418E1E474025005027BD /* Build configuration list for PBXProject "AirPressureSens" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 528C6B951E06740F006E6040;
-			productRefGroup = 528C6B9E1E06740F006E6040 /* Products */;
+			mainGroup = 5247418A1E474025005027BD;
+			productRefGroup = 524741931E474025005027BD /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 528C6BA91E067418006E6040 /* Products */;
-					ProjectRef = 528C6BA81E067418006E6040 /* I2CDeviceModule.xcodeproj */;
+					ProductGroup = 524741A01E474039005027BD /* Products */;
+					ProjectRef = 5247419F1E474039005027BD /* I2CDeviceModule.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				528C6B9C1E06740F006E6040 /* LightSensDisplay */,
+				524741911E474025005027BD /* AirPressureSens */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		528C6BAF1E067418006E6040 /* I2CDeviceModule.framework */ = {
+		524741A61E474039005027BD /* I2CDeviceModule.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = I2CDeviceModule.framework;
-			remoteRef = 528C6BAE1E067418006E6040 /* PBXContainerItemProxy */;
+			remoteRef = 524741A51E474039005027BD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		528C6BB11E067418006E6040 /* I2CDeviceModuleTests.xctest */ = {
+		524741A81E474039005027BD /* I2CDeviceModuleTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = I2CDeviceModuleTests.xctest;
-			remoteRef = 528C6BB01E067418006E6040 /* PBXContainerItemProxy */;
+			remoteRef = 524741A71E474039005027BD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
-		528C6B9A1E06740F006E6040 /* Sources */ = {
+		5247418F1E474025005027BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				528C6BB51E06743B006E6040 /* main.swift in Sources */,
+				524741B11E4740E5005027BD /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		528C6BA31E06740F006E6040 /* Debug */ = {
+		524741981E474025005027BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -222,7 +221,7 @@
 			};
 			name = Debug;
 		};
-		528C6BA41E06740F006E6040 /* Release */ = {
+		524741991E474025005027BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -258,26 +257,23 @@
 			};
 			name = Release;
 		};
-		528C6BA61E06740F006E6040 /* Debug */ = {
+		5247419B1E474025005027BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = LightSensDisplay/Info.plist;
+				INFOPLIST_FILE = AirPressureSens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.LightSensDisplay;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.AirPressureSens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		528C6BA71E06740F006E6040 /* Release */ = {
+		5247419C1E474025005027BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = LightSensDisplay/Info.plist;
+				INFOPLIST_FILE = AirPressureSens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.LightSensDisplay;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.AirPressureSens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -286,25 +282,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		528C6B991E06740F006E6040 /* Build configuration list for PBXProject "LightSensDisplay" */ = {
+		5247418E1E474025005027BD /* Build configuration list for PBXProject "AirPressureSens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				528C6BA31E06740F006E6040 /* Debug */,
-				528C6BA41E06740F006E6040 /* Release */,
+				524741981E474025005027BD /* Debug */,
+				524741991E474025005027BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		528C6BA51E06740F006E6040 /* Build configuration list for PBXNativeTarget "LightSensDisplay" */ = {
+		5247419A1E474025005027BD /* Build configuration list for PBXNativeTarget "AirPressureSens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				528C6BA61E06740F006E6040 /* Debug */,
-				528C6BA71E06740F006E6040 /* Release */,
+				5247419B1E474025005027BD /* Debug */,
+				5247419C1E474025005027BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 528C6B961E06740F006E6040 /* Project object */;
+	rootObject = 5247418B1E474025005027BD /* Project object */;
 }

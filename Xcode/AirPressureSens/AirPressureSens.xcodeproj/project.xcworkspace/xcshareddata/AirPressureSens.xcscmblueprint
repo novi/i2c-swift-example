@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "13A8B1225245493BF8729117C3F3D8B86EA42EF0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "13A8B1225245493BF8729117C3F3D8B86EA42EF0" : 9223372036854775807,
+    "05A7EFC506DF345FE7F125A483D561F5A13207F2" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "67A52FB8-4965-40B1-9FEA-D89AD758E08F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "13A8B1225245493BF8729117C3F3D8B86EA42EF0" : "i2c-swift-example\/",
+    "05A7EFC506DF345FE7F125A483D561F5A13207F2" : "i2c-swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AirPressureSens",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Xcode\/AirPressureSens\/AirPressureSens.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:novi\/i2c-swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "05A7EFC506DF345FE7F125A483D561F5A13207F2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:novi\/i2c-swift-example.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "13A8B1225245493BF8729117C3F3D8B86EA42EF0"
+    }
+  ]
+}

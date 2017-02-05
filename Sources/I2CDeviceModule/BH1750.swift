@@ -72,8 +72,7 @@ extension BH1750 {
     
     // bit layout in highres mode 2
     // MSB
-    // 2^14 2^13 2^12 2^11 2^10 2^9 2^8 2^7 ... 2^6 2^5 2^4 2^3 2^2 2^1 2^0 2^-1
-    // for high res mode
+    // 2^14 2^13 2^12 2^11 2^10 2^9 2^8 2^7 ... 2^6 2^5 2^4 2^3 2^2 2^1 2^0 2^-
     public func readLxValue2() throws -> Double {
         var value = try readRawData()
         let lsb = value & 0x1
