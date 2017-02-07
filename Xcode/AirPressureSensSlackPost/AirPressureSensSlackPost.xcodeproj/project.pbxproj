@@ -1,0 +1,312 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52B0FBEC1E4A085C004AB9B8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0FBEB1E4A085C004AB9B8 /* main.swift */; };
+		52B0FBF71E4A0898004AB9B8 /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0FBF41E4A0891004AB9B8 /* I2CDeviceModule.framework */; };
+		52B0FC0E1E4A19B5004AB9B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0FC0D1E4A19B5004AB9B8 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52B0FBF31E4A0891004AB9B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52BC0A6A1E0507E3008D74D7;
+			remoteInfo = I2CDeviceModule;
+		};
+		52B0FBF51E4A0891004AB9B8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52BC0A731E0507E3008D74D7;
+			remoteInfo = I2CDeviceModuleTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52B0FBDF1E4A083E004AB9B8 /* AirPressureSensSlackPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPressureSensSlackPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B0FBE41E4A083E004AB9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52B0FBEB1E4A085C004AB9B8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2CDeviceModule.xcodeproj; path = ../I2CDeviceModule/I2CDeviceModule.xcodeproj; sourceTree = "<group>"; };
+		52B0FC0D1E4A19B5004AB9B8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52B0FBDD1E4A083D004AB9B8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B0FBF71E4A0898004AB9B8 /* I2CDeviceModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52B0FBD71E4A083D004AB9B8 = {
+			isa = PBXGroup;
+			children = (
+				52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */,
+				52B0FBE11E4A083E004AB9B8 /* AirPressureSensSlackPost */,
+				52B0FBE01E4A083E004AB9B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52B0FBE01E4A083E004AB9B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B0FBDF1E4A083E004AB9B8 /* AirPressureSensSlackPost.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52B0FBE11E4A083E004AB9B8 /* AirPressureSensSlackPost */ = {
+			isa = PBXGroup;
+			children = (
+				52B0FBEA1E4A085C004AB9B8 /* AirPressureSensSlackPost */,
+				52B0FBE41E4A083E004AB9B8 /* Info.plist */,
+			);
+			path = AirPressureSensSlackPost;
+			sourceTree = "<group>";
+		};
+		52B0FBEA1E4A085C004AB9B8 /* AirPressureSensSlackPost */ = {
+			isa = PBXGroup;
+			children = (
+				52B0FBEB1E4A085C004AB9B8 /* main.swift */,
+				52B0FC0D1E4A19B5004AB9B8 /* Constants.swift */,
+			);
+			name = AirPressureSensSlackPost;
+			path = ../../../Sources/AirPressureSensSlackPost;
+			sourceTree = "<group>";
+		};
+		52B0FBEE1E4A0891004AB9B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52B0FBF41E4A0891004AB9B8 /* I2CDeviceModule.framework */,
+				52B0FBF61E4A0891004AB9B8 /* I2CDeviceModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52B0FBDE1E4A083D004AB9B8 /* AirPressureSensSlackPost */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52B0FBE71E4A083E004AB9B8 /* Build configuration list for PBXNativeTarget "AirPressureSensSlackPost" */;
+			buildPhases = (
+				52B0FBDC1E4A083D004AB9B8 /* Sources */,
+				52B0FBDD1E4A083D004AB9B8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirPressureSensSlackPost;
+			productName = AirPressureSensSlackPost;
+			productReference = 52B0FBDF1E4A083E004AB9B8 /* AirPressureSensSlackPost.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52B0FBD81E4A083D004AB9B8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					52B0FBDE1E4A083D004AB9B8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52B0FBDB1E4A083D004AB9B8 /* Build configuration list for PBXProject "AirPressureSensSlackPost" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52B0FBD71E4A083D004AB9B8;
+			productRefGroup = 52B0FBE01E4A083E004AB9B8 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52B0FBEE1E4A0891004AB9B8 /* Products */;
+					ProjectRef = 52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52B0FBDE1E4A083D004AB9B8 /* AirPressureSensSlackPost */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52B0FBF41E4A0891004AB9B8 /* I2CDeviceModule.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = I2CDeviceModule.framework;
+			remoteRef = 52B0FBF31E4A0891004AB9B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52B0FBF61E4A0891004AB9B8 /* I2CDeviceModuleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = I2CDeviceModuleTests.xctest;
+			remoteRef = 52B0FBF51E4A0891004AB9B8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52B0FBDC1E4A083D004AB9B8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52B0FBEC1E4A085C004AB9B8 /* main.swift in Sources */,
+				52B0FC0E1E4A19B5004AB9B8 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52B0FBE51E4A083E004AB9B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52B0FBE61E4A083E004AB9B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52B0FBE81E4A083E004AB9B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../Carthage/Build/Mac\"";
+				INFOPLIST_FILE = AirPressureSensSlackPost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.AirPressureSensSlackPost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52B0FBE91E4A083E004AB9B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../Carthage/Build/Mac\"";
+				INFOPLIST_FILE = AirPressureSensSlackPost/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.AirPressureSensSlackPost;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52B0FBDB1E4A083D004AB9B8 /* Build configuration list for PBXProject "AirPressureSensSlackPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B0FBE51E4A083E004AB9B8 /* Debug */,
+				52B0FBE61E4A083E004AB9B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52B0FBE71E4A083E004AB9B8 /* Build configuration list for PBXNativeTarget "AirPressureSensSlackPost" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52B0FBE81E4A083E004AB9B8 /* Debug */,
+				52B0FBE91E4A083E004AB9B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52B0FBD81E4A083D004AB9B8 /* Project object */;
+}

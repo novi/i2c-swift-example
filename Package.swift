@@ -3,6 +3,7 @@ import PackageDescription
 let package = Package(
     name: "I2CExample",
     targets: [
+                Target(name: "AirPressureSensSlackPost", dependencies: ["I2CDeviceModule"]),
                 Target(name: "AirPressureSensDisplay", dependencies: ["I2CDeviceModule"]),
                 Target(name: "LightSensDisplay", dependencies: ["I2CDeviceModule"]),
                 Target(name: "AirPressureSens", dependencies: ["I2CDeviceModule"]),
@@ -13,6 +14,7 @@ let package = Package(
                  ],
     dependencies: [
         .Package(url: "https://www.github.com/novi/i2c-swift.git", majorVersion: 0),
+        .Package(url: "https://github.com/pvzig/SlackKit.git", majorVersion: 3),
     ],
     exclude: ["Xcode"]
 )

@@ -5,3 +5,5 @@
 xcuserdata
 *.xcuserdatad
 *.xcscmblueprint
+Carthage/
+Sources/*/Constants.swift
