@@ -14,6 +14,8 @@ let device = try getCurrentI2CDevice()
 
 let sensor = BMP180(device: device)
 
+try sensor.reset()
+
 try sensor.calibrate()
 
 let zt8 = try MyZT8Seg(device)
