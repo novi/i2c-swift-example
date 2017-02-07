@@ -1,5 +1,6 @@
 import SlackKit
 import I2CDeviceModule
+import Foundation
 
 func formatDate(_ date: Date) -> String {
     let formatter = DateFormatter()
@@ -10,7 +11,11 @@ func formatDate(_ date: Date) -> String {
     return formatter.string(from: date)
 }
 
-let slack = WebAPI(token: slackAPIToken)
+#if Xcode
+    typealias SlackWebAPI = WebAPI
+#endif
+
+let slack = SlackWebAPI(token: slackAPIToken)
 
 // get current air pressure and temparature
 let device = try getCurrentI2CDevice()
