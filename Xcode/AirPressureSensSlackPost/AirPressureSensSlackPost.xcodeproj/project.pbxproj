@@ -13,6 +13,7 @@
 		52B0FC171E4A1EAD004AB9B8 /* SlackKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52B0FC101E4A1E8C004AB9B8 /* SlackKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52B0FC181E4A1EAD004AB9B8 /* Swifter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52B0FC111E4A1E8C004AB9B8 /* Swifter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		52B0FC191E4A1EAD004AB9B8 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52B0FC121E4A1E8C004AB9B8 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52B0FC1C1E4A2BB5004AB9B8 /* Slack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0FC1B1E4A2BB5004AB9B8 /* Slack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		52B0FC101E4A1E8C004AB9B8 /* SlackKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlackKit.framework; path = ../../Carthage/Build/Mac/SlackKit.framework; sourceTree = "<group>"; };
 		52B0FC111E4A1E8C004AB9B8 /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = ../../Carthage/Build/Mac/Swifter.framework; sourceTree = "<group>"; };
 		52B0FC121E4A1E8C004AB9B8 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = ../../Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
+		52B0FC1B1E4A2BB5004AB9B8 /* Slack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				52B0FBEB1E4A085C004AB9B8 /* main.swift */,
+				52B0FC1B1E4A2BB5004AB9B8 /* Slack.swift */,
 				52B0FC0D1E4A19B5004AB9B8 /* Constants.swift */,
 			);
 			name = AirPressureSensSlackPost;
@@ -208,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B0FBEC1E4A085C004AB9B8 /* main.swift in Sources */,
+				52B0FC1C1E4A2BB5004AB9B8 /* Slack.swift in Sources */,
 				52B0FC0E1E4A19B5004AB9B8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,7 +304,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../Carthage/Build/Mac\"";
 				INFOPLIST_FILE = AirPressureSensSlackPost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
-				OTHER_SWIFT_FLAGS = "-DXcode";
+				OTHER_SWIFT_FLAGS = "-DXcode -DUseSlackKit_";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.AirPressureSensSlackPost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -313,7 +317,7 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)/../../Carthage/Build/Mac\"";
 				INFOPLIST_FILE = AirPressureSensSlackPost/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
-				OTHER_SWIFT_FLAGS = "-DXcode";
+				OTHER_SWIFT_FLAGS = "-DXcode -DUseSlackKit_";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.AirPressureSensSlackPost;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;

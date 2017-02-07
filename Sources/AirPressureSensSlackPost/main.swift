@@ -1,4 +1,3 @@
-import SlackKit
 import I2CDeviceModule
 import Foundation
 
@@ -10,10 +9,6 @@ func formatDate(_ date: Date) -> String {
     formatter.timeStyle = .short
     return formatter.string(from: date)
 }
-
-#if Xcode
-    typealias SlackWebAPI = WebAPI
-#endif
 
 let slack = SlackWebAPI(token: slackAPIToken)
 
@@ -36,7 +31,10 @@ let temp = Float(result.temperature) / 10
 let fahrenheit = 1.8 * Float(result.temperature) / 10 + 32
 let press = Float(result.pressure) / 100 // in hpa
 
-let message = String(format: "🌡%.0f°F(%.1f°C) 🌀%.2fhPa 🕒(%@)", fahrenheit, temp, press, formatDate(Date()))
+let tempStr = String(format: "%.0f°F(%.1f°C)", fahrenheit, temp)
+let pressStr = String(format: "%.2fhPa", press)
+
+let message = "🌡\(tempStr) 🌀\(pressStr) 🕒(\(formatDate(Date()))"
 
 print(message)
 
