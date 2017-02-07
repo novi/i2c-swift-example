@@ -10,6 +10,9 @@
 		52B0FBEC1E4A085C004AB9B8 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0FBEB1E4A085C004AB9B8 /* main.swift */; };
 		52B0FBF71E4A0898004AB9B8 /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B0FBF41E4A0891004AB9B8 /* I2CDeviceModule.framework */; };
 		52B0FC0E1E4A19B5004AB9B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B0FC0D1E4A19B5004AB9B8 /* Constants.swift */; };
+		52B0FC171E4A1EAD004AB9B8 /* SlackKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52B0FC101E4A1E8C004AB9B8 /* SlackKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52B0FC181E4A1EAD004AB9B8 /* Swifter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52B0FC111E4A1E8C004AB9B8 /* Swifter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		52B0FC191E4A1EAD004AB9B8 /* Starscream.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 52B0FC121E4A1E8C004AB9B8 /* Starscream.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +32,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		52B0FC161E4A1EA3004AB9B8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				52B0FC171E4A1EAD004AB9B8 /* SlackKit.framework in CopyFiles */,
+				52B0FC181E4A1EAD004AB9B8 /* Swifter.framework in CopyFiles */,
+				52B0FC191E4A1EAD004AB9B8 /* Starscream.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		52B0FBDF1E4A083E004AB9B8 /* AirPressureSensSlackPost.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPressureSensSlackPost.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B0FBE41E4A083E004AB9B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B0FBEB1E4A085C004AB9B8 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2CDeviceModule.xcodeproj; path = ../I2CDeviceModule/I2CDeviceModule.xcodeproj; sourceTree = "<group>"; };
 		52B0FC0D1E4A19B5004AB9B8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		52B0FC101E4A1E8C004AB9B8 /* SlackKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SlackKit.framework; path = ../../Carthage/Build/Mac/SlackKit.framework; sourceTree = "<group>"; };
+		52B0FC111E4A1E8C004AB9B8 /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = ../../Carthage/Build/Mac/Swifter.framework; sourceTree = "<group>"; };
+		52B0FC121E4A1E8C004AB9B8 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = ../../Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +76,7 @@
 				52B0FBED1E4A0891004AB9B8 /* I2CDeviceModule.xcodeproj */,
 				52B0FBE11E4A083E004AB9B8 /* AirPressureSensSlackPost */,
 				52B0FBE01E4A083E004AB9B8 /* Products */,
+				52B0FC0F1E4A1E8C004AB9B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +116,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		52B0FC0F1E4A1E8C004AB9B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52B0FC101E4A1E8C004AB9B8 /* SlackKit.framework */,
+				52B0FC111E4A1E8C004AB9B8 /* Swifter.framework */,
+				52B0FC121E4A1E8C004AB9B8 /* Starscream.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,6 +135,7 @@
 			buildPhases = (
 				52B0FBDC1E4A083D004AB9B8 /* Sources */,
 				52B0FBDD1E4A083D004AB9B8 /* Frameworks */,
+				52B0FC161E4A1EA3004AB9B8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
