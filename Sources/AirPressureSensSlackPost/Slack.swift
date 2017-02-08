@@ -40,16 +40,17 @@ internal extension String {
     #else
     
     func cfString() -> CFString {
-        let selfData = self.data(using: .utf8)!
+        let selfData = self.data(using: .utf16)!
         return selfData.withUnsafeBytes({ (bytes: UnsafePointer<UInt8>) in
-        CFStringCreateWithBytes(nil, bytes, selfData.count, CFStringEncoding(kCFStringEncodingUTF8), true)
+        CFStringCreateWithBytes(nil, bytes, selfData.count, CFStringEncoding(kCFStringEncodingUTF16), true)
         })
     }
     
     func urlQueryEscaped() -> String {
         let outStr = CFURLCreateStringByAddingPercentEscapes(nil, self.cfString(), nil, "!*'();:@&=+$,/?%#[]".cfString(), CFStringEncoding(kCFStringEncodingUTF8))
-        let outData = String(utf8String: CFStringGetCStringPtr(outStr, CFStringEncoding(kCFStringEncodingUTF8)))
-        return outData!
+        let outCFData = CFStringCreateExternalRepresentation(nil, outStr, CFStringEncoding(kCFStringEncodingUTF16), 0)
+        let outData = Data(bytes: CFDataGetBytePtr(outCFData), count: CFDataGetLength(outCFData))
+        return String(data: outData, encoding: .utf16)!
     }
     #endif
 }
