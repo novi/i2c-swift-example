@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreFoundation
 
 #if UseSlackKit && Xcode
     typealias SlackWebAPI = WebAPI
@@ -25,6 +26,32 @@ internal extension String {
         escapedString = replacingOccurrences(of: ">", with: "&gt;")
         return escapedString
     }
+    
+    #if os(macOS)
+    func urlQueryEscaped() -> String {
+        var queryCharset = CharacterSet()
+        queryCharset.insert(charactersIn: "a"..."z")
+        queryCharset.insert(charactersIn: "-_.!~*'()")
+        queryCharset.insert(charactersIn: "A"..."Z")
+        queryCharset.insert(charactersIn: "0"..."9")
+        return addingPercentEncoding(withAllowedCharacters: queryCharset)!
+        // // not working on Swift ARM ???
+    }
+    #else
+    
+    func cfString() -> CFString {
+        let selfData = self.data(using: .utf8)!
+        return selfData.withUnsafeBytes({ (bytes: UnsafePointer<UInt8>) in
+        CFStringCreateWithBytes(nil, bytes, selfData.count, CFStringEncoding(kCFStringEncodingUTF8), true)
+        })
+    }
+    
+    func urlQueryEscaped() -> String {
+        let outStr = CFURLCreateStringByAddingPercentEscapes(nil, self.cfString(), nil, "!*'();:@&=+$,/?%#[]".cfString(), CFStringEncoding(kCFStringEncodingUTF8))
+        let outData = String(utf8String: CFStringGetCStringPtr(outStr, CFStringEncoding(kCFStringEncodingUTF8)))
+        return outData!
+    }
+    #endif
 }
  
 final class SlackWebAPI {
@@ -56,13 +83,9 @@ final class SlackWebAPI {
         for (k, v) in parameters {
             queryItems.append(URLQueryItem(name: k, value: v))
         }
-        var queryCharset = CharacterSet()
-        queryCharset.insert(charactersIn: "a"..."z")
-        queryCharset.insert(charactersIn: "-_.!~*'()")
-        queryCharset.insert(charactersIn: "A"..."Z")
-        queryCharset.insert(charactersIn: "0"..."9")
+        
         url.percentEncodedQuery = queryItems.map({ item in
-            let value = item.value?.addingPercentEncoding(withAllowedCharacters: queryCharset)!
+            let value = item.value?.urlQueryEscaped()
             return value == nil ? item.name : "\(item.name)=\(value!)"
         }).joined(separator: "&")
         
