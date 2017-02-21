@@ -30,7 +30,7 @@ sleep(10)
 // --- test end
  */
 
-// get current air pressure and temparature
+// get current air pressure and temperature
 let device = try getCurrentI2CDevice()
 
 let sensor = BMP180(device: device)
