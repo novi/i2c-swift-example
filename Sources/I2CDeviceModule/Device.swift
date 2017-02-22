@@ -25,8 +25,25 @@ public final class DeviceWrap: I2CDevice {
     }
 }
 
+
+fileprivate func getCommandArgs() -> [String: String] {
+    var args = CommandLine.arguments
+    args.removeFirst() // cmd[0] is program name
+    var result: [String: String] = [:]
+    for arg in args {
+        let parts = arg.components(separatedBy: "=")
+        if parts.count == 2 {
+            result[parts[0].lowercased()] = parts[1]
+        }
+    }
+    return result
+}
+
 #if os(Linux)
 public func getCurrentI2CDevice() throws -> DeviceWrap {
+    if let port = getCommandArgs()["i2cnum"], let portNum = UInt(port) {
+        return DeviceWrap(try I2CBusDevice(portNumber: UInt8(portNum) ))
+    }
     
     for i in 0..<10 {
         if FileManager.default.fileExists(atPath: "/dev/i2c-\(i)") {
@@ -40,6 +57,7 @@ public func getCurrentI2CDevice() throws -> DeviceWrap {
 #else
     
 public func getCurrentI2CDevice() throws -> DeviceWrap {
+    
     return try DeviceWrap(I2CTinyUSB())
 }
 
