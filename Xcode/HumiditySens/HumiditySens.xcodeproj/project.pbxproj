@@ -1,0 +1,305 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		52C3A2DB1E66EC0100410E6F /* I2CDeviceModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52C3A2D81E66EBF900410E6F /* I2CDeviceModule.framework */; };
+		52C3A2E21E66F2B200410E6F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C3A2E11E66F2B200410E6F /* main.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		52C3A2D71E66EBF900410E6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52C3A2D11E66EBF900410E6F /* I2CDeviceModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52BC0A6A1E0507E3008D74D7;
+			remoteInfo = I2CDeviceModule;
+		};
+		52C3A2D91E66EBF900410E6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52C3A2D11E66EBF900410E6F /* I2CDeviceModule.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 52BC0A731E0507E3008D74D7;
+			remoteInfo = I2CDeviceModuleTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		52C3A2C31E66EBAB00410E6F /* HumiditySens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HumiditySens.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52C3A2C81E66EBAB00410E6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52C3A2D11E66EBF900410E6F /* I2CDeviceModule.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = I2CDeviceModule.xcodeproj; path = ../I2CDeviceModule/I2CDeviceModule.xcodeproj; sourceTree = "<group>"; };
+		52C3A2E11E66F2B200410E6F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52C3A2C11E66EBAB00410E6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C3A2DB1E66EC0100410E6F /* I2CDeviceModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		52C3A2BB1E66EBAB00410E6F = {
+			isa = PBXGroup;
+			children = (
+				52C3A2D11E66EBF900410E6F /* I2CDeviceModule.xcodeproj */,
+				52C3A2C51E66EBAB00410E6F /* HumiditySens */,
+				52C3A2C41E66EBAB00410E6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		52C3A2C41E66EBAB00410E6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52C3A2C31E66EBAB00410E6F /* HumiditySens.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52C3A2C51E66EBAB00410E6F /* HumiditySens */ = {
+			isa = PBXGroup;
+			children = (
+				52C3A2E01E66F2B200410E6F /* HumiditySens */,
+				52C3A2C81E66EBAB00410E6F /* Info.plist */,
+			);
+			path = HumiditySens;
+			sourceTree = "<group>";
+		};
+		52C3A2D21E66EBF900410E6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52C3A2D81E66EBF900410E6F /* I2CDeviceModule.framework */,
+				52C3A2DA1E66EBF900410E6F /* I2CDeviceModuleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52C3A2E01E66F2B200410E6F /* HumiditySens */ = {
+			isa = PBXGroup;
+			children = (
+				52C3A2E11E66F2B200410E6F /* main.swift */,
+			);
+			name = HumiditySens;
+			path = ../../../Sources/HumiditySens;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		52C3A2C21E66EBAB00410E6F /* HumiditySens */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C3A2CB1E66EBAB00410E6F /* Build configuration list for PBXNativeTarget "HumiditySens" */;
+			buildPhases = (
+				52C3A2C01E66EBAB00410E6F /* Sources */,
+				52C3A2C11E66EBAB00410E6F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HumiditySens;
+			productName = HumiditySens;
+			productReference = 52C3A2C31E66EBAB00410E6F /* HumiditySens.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		52C3A2BC1E66EBAB00410E6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Yusuke Ito";
+				TargetAttributes = {
+					52C3A2C21E66EBAB00410E6F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 52C3A2BF1E66EBAB00410E6F /* Build configuration list for PBXProject "HumiditySens" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 52C3A2BB1E66EBAB00410E6F;
+			productRefGroup = 52C3A2C41E66EBAB00410E6F /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 52C3A2D21E66EBF900410E6F /* Products */;
+					ProjectRef = 52C3A2D11E66EBF900410E6F /* I2CDeviceModule.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				52C3A2C21E66EBAB00410E6F /* HumiditySens */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		52C3A2D81E66EBF900410E6F /* I2CDeviceModule.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = I2CDeviceModule.framework;
+			remoteRef = 52C3A2D71E66EBF900410E6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		52C3A2DA1E66EBF900410E6F /* I2CDeviceModuleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = I2CDeviceModuleTests.xctest;
+			remoteRef = 52C3A2D91E66EBF900410E6F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		52C3A2C01E66EBAB00410E6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52C3A2E21E66F2B200410E6F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		52C3A2C91E66EBAB00410E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		52C3A2CA1E66EBAB00410E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		52C3A2CC1E66EBAB00410E6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HumiditySens/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.HumiditySens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		52C3A2CD1E66EBAB00410E6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HumiditySens/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.novi.HumiditySens;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		52C3A2BF1E66EBAB00410E6F /* Build configuration list for PBXProject "HumiditySens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C3A2C91E66EBAB00410E6F /* Debug */,
+				52C3A2CA1E66EBAB00410E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52C3A2CB1E66EBAB00410E6F /* Build configuration list for PBXNativeTarget "HumiditySens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52C3A2CC1E66EBAB00410E6F /* Debug */,
+				52C3A2CD1E66EBAB00410E6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 52C3A2BC1E66EBAB00410E6F /* Project object */;
+}
