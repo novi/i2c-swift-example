@@ -12,5 +12,6 @@ while true {
     let t = try module.mesureTemperature()
     let rh = try module.mesureRH()
     
-    print("\(t)°C, \(rh)%")
+    let string = String(format: "%.2f°C, %.2f%%", t, rh)
+    print(string)
 }

@@ -33,7 +33,7 @@ fileprivate extension SHT21 {
     
     func send(command: Command) throws -> UInt16 {
         let data = try sendAndRead(command: command, readByte: 3)
-        let value: UInt16 = UInt16(data[0] << 8) | UInt16(data[1] & 0xfc)
+        let value: UInt16 = (UInt16(data[0]) << 8) | UInt16(data[1] & 0xfc)
         return value
     }
 }
