@@ -9,6 +9,7 @@ This repository demonstrates how to control I2C devie with Swift. The library pa
 * `Sources/LightSensDisplay`: Combine with LED and light sensor the above
 * `Sources/AirPressureSens`: Air Pressure Sensor demo (BMP180)
 * `Sources/AirPressureSensDisplay`: Combine with LED and air pressure sensor
+* `Sources/HumiditySens`: Humidity Sensor demo (SHT21)
 
 ## Supported Platform
 
